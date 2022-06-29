@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+body>.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body>.page>section {
+    width: 50vw;
+    height: 50vh;
+    border: 1px solid grey;
+}
+
+#app1 {}
+
+#app2 {}
+
+#app2 #tab-bar {
+    display: flex;
+}
+
+#app2 #tab-bar>li {
+    width: 50%;
+    border: 1px solid grey;
+}
+
+#app2 #tab-bar>li.selected {
+    background-color: grey;
+}
+
+#app2 #tab-content>li {
+    display: none;
+}
+
+#app2 #tab-content>li.active {
+    display: block;
+}
+
+#app3 {}
+
+#app3 .square {
+    background-color: pink;
+    width: 10vh;
+    height: 10vh;
+    margin-top: 10vh;
+    margin-left: 10vh;
+    transition: transform linear 0.5s;
+}
+
+#app3 .square.active {
+    transform: translateX(20vw);
+}
+
+#app4 {}
+
+#app4 .circle {
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 7vh;
+    border-radius: 50%;
+}
+
+@keyframes change {
+    0% {
+        background-color: red;
+    }
+    10% {
+        background-color: red;
+    }
+    90% {
+        background-color: blue;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
+#app4 .circle.active {
+    animation: change 1s infinite linear alternate;
+}
